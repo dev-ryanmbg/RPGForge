@@ -56,3 +56,12 @@ Improve stability, cohesion and usability of existing systems.
 
 ### 1.0 — First Stable Release
 Release the first stable version of RPGForge with documentation for creating custom campaigns.
+
+
+RPGForge uses MAJOR.MINOR.PATCH versioning. MAJOR represents major or breaking changes, MINOR represents new features or systems, and PATCH represents small fixes and improvements. Git tags will be used to mark versions, while branches will be used for individual features and fixes.
+
+**Current version:** 0.1.0
+
+**Status:** Early Development
+
+*This roadmap is not a strict plan. Features and versions may change as the project develops.*
