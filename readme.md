@@ -10,6 +10,9 @@ The **RPGForge** project has the purpose of not only being an RPG game, but, abo
 ## Origin
 The idea for this project came a long time ago, since I started programming and consequently started using the terminal. I remember having this "vibe" — I don't know exactly where it came from — of text-based RPGs running in the terminal. I have always found this aesthetic interesting. Now that I am learning C++, I want to use this project as a tool to further develop my programming skills.
 
+## Campaigns
+As the main inspiration for this project is TTRPGs, when you use the tool, you will create a "Campaign". A Campaign is the main entry point of an adventure, where the adventure itself will run. RPGForge provides the systems and tools needed to build an RPG, while the Campaign is what uses those systems to create a specific adventure. Each Campaign can have its own characters, NPCs, dialogues, locations, dungeons, quests, rules and story. This allows different RPGs to be built and played using the same RPGForge.
+
 ## Roadmap
 *This roadmap is not a strict plan. Features and versions may change as the project develops.*
 
@@ -20,8 +23,8 @@ The first version will focus on the fundamental modules of RPGForge.
 * **HUD module:** will provide simple UI functions to make development easier and create understandable interfaces.
 * **Entities module:** will store information about monsters and players, such as attributes, HP and inventory, as well as basic functions related to entities, such as `pick_item()`, `damage()` and `heal()`.
 
-### 0.2.x — Adventure Places
-The concept of Adventure Place is very generic, but simple to understand. An Adventure Place, or AP, is divided into areas that could represent rooms or not. Each area can have a certain type of monster, loot, or anything else. Every AP has some kind of danger. Translate danger into whatever you want in your universe, but danger is one of the ways to create tension.
+### 0.2 — Adventure Places
+The concept of Adventure Place is very generic, but simple to understand. An Adventure Place, or AP, is divided into areas. Each area can have a certain type of monster, loot, or anything else. Every AP has some kind of danger. Translate danger into whatever you want in your universe, but danger is one of the ways to create tension.
 
 This concept is briefly defined this way because the tool is scenario-agnostic, so it can be used for any scenario (Sci-Fi, Medieval Fantasy, Horror and many others).
 
@@ -65,7 +68,7 @@ More character customization through race, class, past, skills, proficiencies an
 * **Character Creation:** with the expanded character system, it would be illogical if the player could not create a character! The player will be able to create their own character by choosing a race, class, past, distributing their ability points and choosing a personality. These choices will provide different skills and characteristics. The player will also be able to give their character a name!
 * **New Character Progression:** as progression will no longer be tied to one single character, it will now be attributed especially to the class, offering new special abilities throughout progression. The race will also provide one initial special ability.
 
-### 0.7.x — World Update
+### 0.7 — World Update
 The world is not limited by the darkness of dungeons or city walls. Go beyond! After this update, players will be able to explore the world outside cities in a pointcrawl style.
 
 #### Features
