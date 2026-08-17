@@ -1,17 +1,41 @@
 # RPGForge
 
 ## About
-The **RPGForge** project has the purpose of not only being an RPG game, but, above all, being **a tool where RPGs can be built**. First of all, this is a **personal project**, so I have no intention of convincing you to use it. However, **I would really appreciate your feedback**, both to improve the program and, honestly, for my own personal satisfaction.
+The **RPGForge** project is **a C++ framework** that include many typical RPG Game functions to make an RPG Dev easier and faster. First of all, this is a **personal project**, so I have no intention of convincing you to use it. However, **I would really appreciate your feedback**, both to improve the program and, honestly, for my own personal satisfaction.
 
-**So, why use this instead of RPG Maker or something similar?**
-1. RPGForge's main inspiration comes from tabletop RPGs such as Dungeons & Dragons. This means that the focus is on role-playing and creating a story, not just playing a game (although it is a game too). There will be many tools to offer different possibilities for giving more depth to NPCs, dialogues and narration.
-2. You should know C++ or at least the basics of programming logic, so it should not be too difficult to use the tool, especially because there will eventually be a guide on how to create your own campaigns. The whole tool is designed around customizable, practical and easy-to-edit campaigns. You might even learn programming with it.
+### Inspirated by Tabletop RPGs
+RPGForge's main inspiration comes from tabletop RPGs such as Dungeons & Dragons. This means that the focus is on role-playing and creating a story, not just playing a game (although it is a game too). There will be many mechanics and guides to encourage the user to give more depth to story, however, the final decision relies on the user.
 
-## Origin
+### Sample Campaigns
+Tghoight the many versions of the project, i will also create samples (mostly medieval fantasy) so you users can test the tool results and see examples of it in pratice.
+
+### Origin
 The idea for this project came a long time ago, since I started programming and consequently started using the terminal. I remember having this "vibe" — I don't know exactly where it came from — of text-based RPGs running in the terminal. I have always found this aesthetic interesting. Now that I am learning C++, I want to use this project as a tool to further develop my programming skills.
 
-## Campaigns
-As the main inspiration for this project is TTRPGs, when you use the tool, you will create a "Campaign". A Campaign is the main entry point of an adventure, where the adventure itself will run. RPGForge provides the systems and tools needed to build an RPG, while the Campaign is what uses those systems to create a specific adventure. Each Campaign can have its own characters, NPCs, dialogues, locations, dungeons, quests, rules and story. This allows different RPGs to be built and played using the same RPGForge.
+# FAQ
+### 1. What is a "Campaign"?
+As the main inspiration for this project is TTRPGs we will use the term "Campaign" for adventures and worlds created using RPGForge. Each Campaign can have its own characters, NPCs, dialogues, locations, dungeons, quests, rules and story. This allows different RPGs to be built and played using the same RPGForge.
+
+### 2. How do I create a Campaign?
+As for now (v0.1) campaigns aren't even a thing, so you can just test some features, not even play. At v0.2 there will be some functions that will make the things easier. Tecnically explaining for now, what i expect is: The campaign will be a ".cpp" file that will contain the code that will run the campaigns. The systems are separated in another folder, these are those who will provide functions to use into the code. As the time passes the framework use will be better explained and defined and maybe even i can thing in some visual campaign creator.
+
+### 3. Who is RPGForge intended for?
+Anyone who wants to create a RPG adventure. In special, TTRPGs enjoyers. However, the framework is not to hard to learn, even if you are a begginer. If something is too hard, it means it probably could be better, so you can feedback this to me!
+
+### 4. What does RPGForge actually provide as a framework?
+Functions to make the user experience as RPG dev easier, so you can focus more on the story part instead of the coding part, however, i must disclaim that coding is not excluded at all.
+
+### 5. What is the difference between RPGForge, a Campaign and a Player?
+RPGForge is the framework, Campaigns is a file that uses it to create one or multiple storylines and Players are those who play the ".exe" product. So RPGForge (mechanical framework) ⮕ Campaign (uses the framework to create storylines) ⮕ .exe (Final game product). 
+
+### 6. How much freedom the user has with the Campaign?
+With the campaign file you can change the default ability scores (like instead of Strenght, Dexterity, Inteligence... you could use Physical and Mind), create new classes and many other rule changes. Also, when you need to change more parameters, you can always acess the framework files and edit it. That means you can use RPGForge for any theme and adapt many of his features to match the scenario.
+
+### 7. What's the difference between a Tool user and a player?
+The tool user will create and edit the campaign file, also maybe even editting the framework in the process and really deal with the RPGForge Framework. The player is expected only to recieve the ".exe" that will run that campaign.
+
+### 8. Can i contribute?
+I am a really new dev, so im afraid that people just ruin my code or have some creative discordances. So if you want to help, contact me on Discord.
 
 ## Roadmap
 *This roadmap is not a strict plan. Features and versions may change as the project develops.*
@@ -32,12 +56,12 @@ This concept is briefly defined this way because the tool is scenario-agnostic, 
 * **Combat module:** will provide simple turn-based combat with HP, damage and item usage.
 * **Create Character Presets:** the tool user will be able to create their own preset characters and make them available to the player. Many other features, such as skills, special abilities, races and classes, will not be here yet, or may change later.
 * **Create Dungeons:** the tool user will also be able to create their own dungeon presets. The experience of creating them may still be somewhat difficult, but with feedback I will improve it to make the process easier for developers.
-* **Sample Characters:** these characters are inspired by HeroQuest (one of the predecessors of common medieval fantasy TTRPGs). We will offer character options to choose from, each one having their own focus:
+* **Sample Character Presets:** I have and idea of what i want to do for now, but its suject to changes. These characters are inspired by HeroQuest (one of the predecessors of common medieval fantasy TTRPGs). We will offer character options to choose from, each one having their own focus:
     * The Elf (+Skills)
     * The Dwarf (+Defense)
     * The Barbarian (+Damage)
     * The Mage (+Magic)
-* **Sample Dungeon:** the player will be able to play through a simple dungeon from a fantasy scenario, going from one room to another and fighting monsters. There will be no real loot, XP or saves yet. The idea is simply to play the dungeon with one character and discard the session afterwards, but the player can always test other characters.
+* **Sample Adventure Place:** the player will be able to play through a simple dungeon from a fantasy scenario, going from one room to another and fighting monsters. There will be no real loot, XP or saves yet. The idea is simply to play the dungeon with one character and discard the session afterwards, but the player can always test other characters.
 
 ### 0.3 — Full Dungeon Sample
 #### Features:
