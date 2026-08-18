@@ -1,0 +1,4 @@
+/system/output
+/campaigns/output
+*.exe
+*.o
