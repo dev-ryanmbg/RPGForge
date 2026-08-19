@@ -78,4 +78,4 @@ The Player is expected to only receive the `.exe` file that runs the Campaign.
 
 I am a really new developer, so I'm afraid that people might ruin my code or have creative disagreements with me.
 
-If you want to help, please contact me on Discord.
+If you want to help, please contact me on Gmail (ryanmateusbentes@gmail.com) or Discord (opontinhoyt).
