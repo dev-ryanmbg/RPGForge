@@ -1,10 +1,79 @@
 #pragma once
-#include <iostream>
 #include <stdio.h>
 #include <locale.h>
+#include <stdarg.h>
+#include "../system/statblock.hpp"
 using namespace std;
 
 // FILE NOT COMMENTED OR TRANSLATED YET
+
+/*Recieves a text and print the message. This can be used to substitue by tags.
+Back-end its just a printf(), but have the system tags and the data.*/
+// NOT WORKING CORRECTLY
+void formatMessage(string _text, ...){
+    va_list args;
+    va_start(args, _text);
+
+    for(size_t checkingPosition = 0; checkingPosition < _text.size(); checkingPosition++){
+        int replacePos; // Position of the part that will be replaced
+        if(_text.find("{AbilityScore}", checkingPosition, 15) != string::npos){
+            printf("\n{AbilityScore} Encontrado!\n");   
+            replacePos = _text.find("{AbilityScore}", checkingPosition, 15);
+            _text.replace(replacePos, 13, (va_arg(args, AbilityScore*))->viewName);
+        }
+
+        else if (_text.find("{Points}", checkingPosition, 9) != string::npos){
+            replacePos = _text.find("{Points}", checkingPosition, 9);
+            _text.replace(replacePos, 9, (va_arg(args, Points*))->viewName);
+        }
+
+        else if(_text.find("{Container}", checkingPosition, 12) != string::npos){
+            replacePos = _text.find("{Container}", checkingPosition, 12);
+            _text.replace(replacePos, 12, (va_arg(args, Container*))->viewName);
+        }
+
+        else if(_text.find("{char}", checkingPosition, checkingPosition + 7) != string::npos){
+            replacePos = _text.find("{char}", checkingPosition, checkingPosition + 7);
+            _text.replace(replacePos, 7, va_arg(args, char *));
+        }
+    }
+
+    cout << _text << endl;
+}
+
+
+// Prints "ERROR: " then text
+void errorMessage(string _text, ...){
+    va_list args;
+    va_start(args, _text);
+
+    printf("ERROR: ");
+
+    for(size_t checkingPosition = 0; checkingPosition < _text.size(); checkingPosition++){
+        int replacePos; // Position of the part that will be replaced
+        if(_text.find("{AbilityScore}", checkingPosition, 15) != string::npos){   
+            replacePos = _text.find("{AbilityScore}", checkingPosition, 15);
+            _text.replace(replacePos, 13, (va_arg(args, AbilityScore*))->viewName);
+        }
+
+        else if (_text.find("{Points}", checkingPosition, 9) != string::npos){
+            replacePos = _text.find("{Points}", checkingPosition, 9);
+            _text.replace(replacePos, 9, (va_arg(args, Points*))->viewName);
+        }
+
+        else if(_text.find("{Container}", checkingPosition, 12) != string::npos){
+            replacePos = _text.find("{Container}", checkingPosition, 12);
+            _text.replace(replacePos, 12, (va_arg(args, Container*))->viewName);
+        }
+
+        else if(_text.find("{char}", checkingPosition, checkingPosition + 7) != string::npos){
+            replacePos = _text.find("{char}", checkingPosition, checkingPosition + 7);
+            _text.replace(replacePos, 7, va_arg(args, char *));
+        }
+    }
+
+    cout << _text << endl;
+}
 
 struct style{
     int width;
@@ -38,6 +107,7 @@ void header(string cont){
     for(int i = 0; i < (mid - mid_cont); i++){printf(" ");}
     printf("%s\n", cont.c_str());
     for(int i = 0; i < _width; i++){printf("%s", _default.header_style.c_str());}
+    printf("\n");
 }
 
 void section(string cont){
@@ -47,7 +117,8 @@ void section(string cont){
     printf("\n");
 }
 
-// Código importado de: https://www.reddit.com/r/Cplusplus/comments/1axx2u2/some_tips_to_handle_utf8_strings_in_c/?tl=pt-br
+// TODO: Replace this UTF-8 handling with a proper solution
+// Code imported from: https://www.reddit.com/r/Cplusplus/comments/1axx2u2/some_tips_to_handle_utf8_strings_in_c/?tl=pt-br
 int check_utf8_char(string &utf, long i)
 {
     unsigned char check = utf[i] & 0xF0;
