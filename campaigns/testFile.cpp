@@ -2,8 +2,11 @@
 #include <iostream>
 #include <cstdlib>
 #include <locale.h>
-#include "../system/ui.hpp"
-#include "../system/statblock.hpp"
+#include "../system/ui/format.hpp"
+#include "../system/statblocks/AbilityScore.hpp"
+#include "../system/statblocks/Points.hpp"
+#include "../system/statblocks/Container.hpp"
+
 using namespace std;
 
 struct DnDPlayerCharacter {
@@ -34,8 +37,11 @@ struct DnDPlayerCharacter {
 
 int main (){
     setlocale(LC_ALL, ".UTF-8");
-    header("RPG Forge");
+    // header("RPG Forge");
     DnDPlayerCharacter Ryan;
-    formatMessage("Ryan Strenght Value: {AbilityScore}", Ryan.Str);
+    formatMessage("Hey {} {} {} {}");
+    cout << "oii";
+    int a;
+    cin >> a;
     return 0;
 }

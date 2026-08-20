@@ -10,40 +10,15 @@
 Back-end its just a printf(), but have the system tags and the data.*/
 // NOT WORKING CORRECTLY
 void formatMessage(string _text, ...){
-    cout << "testing";
+    cout << "TESTE NOVA VERSAO 123456" << endl;
     va_list args;
-
-    int argumentsRecieved;
-
+    cout << _text.size() << endl;
     for(size_t checkingPosition = 0; checkingPosition < _text.size(); checkingPosition++){
-        int replacePos; // Position of the part that will be replaced
-        if(_text.find("{AbilityScore}", checkingPosition, 15) != string::npos){
-            printf("\n{AbilityScore} Encontrado!\n");   
-            replacePos = _text.find("{AbilityScore}", checkingPosition, 15);
-            _text.replace(replacePos, 13, (va_arg(args, AbilityScore*))->viewName);
-            argumentsRecieved++;
-        }
-
-        else if (_text.find("{Points}", checkingPosition, 9) != string::npos){
-            replacePos = _text.find("{Points}", checkingPosition, 9);
-            _text.replace(replacePos, 9, (va_arg(args, Points*))->viewName);
-            argumentsRecieved++;
-        }
-
-        else if(_text.find("{Container}", checkingPosition, 12) != string::npos){
-            replacePos = _text.find("{Container}", checkingPosition, 12);
-            _text.replace(replacePos, 12, (va_arg(args, Container*))->viewName);
-            argumentsRecieved++;
-        }
-
-        else if(_text.find("{char}", checkingPosition, checkingPosition + 7) != string::npos){
-            replacePos = _text.find("{char}", checkingPosition, checkingPosition + 7);
-            _text.replace(replacePos, 7, va_arg(args, char *));
-            argumentsRecieved++;
+        cout << checkingPosition << endl;
+        if(_text.find('{', checkingPosition) != string::npos){
+            printf("Argumento encontrado!");
         }
     }
-
-    va_start(args, argumentsRecieved);
     va_end(args);
     cout << _text << endl;
 }
@@ -51,35 +26,6 @@ void formatMessage(string _text, ...){
 
 // Prints "ERROR: " then text
 void errorMessage(string _text, ...){
-    va_list args;
-    va_start(args, _text);
-
-    printf("ERROR: ");
-
-    for(size_t checkingPosition = 0; checkingPosition < _text.size(); checkingPosition++){
-        int replacePos; // Position of the part that will be replaced
-        if(_text.find("{AbilityScore}", checkingPosition, 15) != string::npos){   
-            replacePos = _text.find("{AbilityScore}", checkingPosition, 15);
-            _text.replace(replacePos, 13, (va_arg(args, AbilityScore*))->viewName);
-        }
-
-        else if (_text.find("{Points}", checkingPosition, 9) != string::npos){
-            replacePos = _text.find("{Points}", checkingPosition, 9);
-            _text.replace(replacePos, 9, (va_arg(args, Points*))->viewName);
-        }
-
-        else if(_text.find("{Container}", checkingPosition, 12) != string::npos){
-            replacePos = _text.find("{Container}", checkingPosition, 12);
-            _text.replace(replacePos, 12, (va_arg(args, Container*))->viewName);
-        }
-
-        else if(_text.find("{char}", checkingPosition, checkingPosition + 7) != string::npos){
-            replacePos = _text.find("{char}", checkingPosition, checkingPosition + 7);
-            _text.replace(replacePos, 7, va_arg(args, char *));
-        }
-    }
-
-    cout << _text << endl;
 }
 
 struct style{
