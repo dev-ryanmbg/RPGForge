@@ -36,6 +36,6 @@ int main (){
     setlocale(LC_ALL, ".UTF-8");
     header("RPG Forge");
     DnDPlayerCharacter Ryan;
-    formatMessage("Ryan Strenght Value: {AbilityScore}", Ryan.Str);
+    formatMessage("Ryan Strenght Value: {AbilityScore}", &Ryan.Str);
     return 0;
 }
