@@ -3,7 +3,6 @@
 #include <locale.h>
 #include <stdarg.h>
 #include "../system/statblock.hpp"
-using namespace std;
 
 // FILE NOT COMMENTED OR TRANSLATED YET
 
@@ -11,8 +10,10 @@ using namespace std;
 Back-end its just a printf(), but have the system tags and the data.*/
 // NOT WORKING CORRECTLY
 void formatMessage(string _text, ...){
+    cout << "testing";
     va_list args;
-    va_start(args, _text);
+
+    int argumentsRecieved;
 
     for(size_t checkingPosition = 0; checkingPosition < _text.size(); checkingPosition++){
         int replacePos; // Position of the part that will be replaced
@@ -20,24 +21,30 @@ void formatMessage(string _text, ...){
             printf("\n{AbilityScore} Encontrado!\n");   
             replacePos = _text.find("{AbilityScore}", checkingPosition, 15);
             _text.replace(replacePos, 13, (va_arg(args, AbilityScore*))->viewName);
+            argumentsRecieved++;
         }
 
         else if (_text.find("{Points}", checkingPosition, 9) != string::npos){
             replacePos = _text.find("{Points}", checkingPosition, 9);
             _text.replace(replacePos, 9, (va_arg(args, Points*))->viewName);
+            argumentsRecieved++;
         }
 
         else if(_text.find("{Container}", checkingPosition, 12) != string::npos){
             replacePos = _text.find("{Container}", checkingPosition, 12);
             _text.replace(replacePos, 12, (va_arg(args, Container*))->viewName);
+            argumentsRecieved++;
         }
 
         else if(_text.find("{char}", checkingPosition, checkingPosition + 7) != string::npos){
             replacePos = _text.find("{char}", checkingPosition, checkingPosition + 7);
             _text.replace(replacePos, 7, va_arg(args, char *));
+            argumentsRecieved++;
         }
     }
 
+    va_start(args, argumentsRecieved);
+    va_end(args);
     cout << _text << endl;
 }
 

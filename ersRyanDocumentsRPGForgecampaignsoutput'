@@ -1,0 +1,57 @@
+[33mcommit e0c892ae9e6ff5a463393c22b6783294881a15ae[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mformat2[m[33m)[m
+Author: dev-ryanmbg <ryanmateusbentes@gmail.com>
+Date:   Wed Aug 19 18:53:14 2026 -0300
+
+    [Added] WIP: formatMessage and errorMessage
+
+[33mcommit df23f34c49b8bb6653f80e71f0ccebd51be58788[m
+Author: dev-ryanmbg <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 23:44:24 2026 -0300
+
+    [Added] Improved "Statblock" system for entities
+
+[33mcommit 426079fcad5c4951f0c387246177d9be8a122b99[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 20:56:31 2026 -0300
+
+    [Misc] created .gitignore
+
+[33mcommit e11cb2ea5f1298f8ca08df3c6513c3293da68d92[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 20:47:31 2026 -0300
+
+    [Docs] versioning info and current status to roadmap
+
+[33mcommit 176ee2be6953da4047794ebdc135f9881c27257e[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 20:46:31 2026 -0300
+
+    [Docs] removed overly detailed roadmap from readme.md
+
+[33mcommit 5c55a797d492a0d0aea8c74c9ad779a5c1d076d2[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 20:45:06 2026 -0300
+
+    Create initial roadmap for RPGForge development
+    
+    Added a roadmap outlining project milestones and features.
+
+[33mcommit c9f868dac1bffc14567997814735f59e6aac6070[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 20:36:36 2026 -0300
+
+    [Docs] Enhance README with new sections and clarifications
+    
+    Expanded the README to include additional sections on inspiration, sample campaigns, FAQs, and roadmap details. Improved clarity and organization of content.
+
+[33mcommit 21ce32718aa0ee53afe3f317e4b7f7ab06c4c2ad[m
+Author: dev.ryan <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 18:42:13 2026 -0300
+
+    minor readme additions
+
+[33mcommit d76e6fb2e418cb1a8e1e97d84715ea29099078ef[m
+Author: dev-ryanmbg <ryanmateusbentes@gmail.com>
+Date:   Mon Aug 17 13:05:29 2026 -0300
+
+    "Initial Commit"
