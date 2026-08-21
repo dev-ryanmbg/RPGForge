@@ -4,6 +4,8 @@
 #include "../ui/format.hpp"
 using namespace std;
 
+void formatMessage(string _text, ...);
+
 struct Container{
     string viewName; // Element name that will be shown for this Container. ex: "Inventory".
     vector<string> content; // Contain all the contents of the Container.
@@ -91,14 +93,13 @@ struct Container{
             }
             content[freeSlot-1] = _object;
             return true;
+        }
 
         // Free slot not found
-        } else {
-            if (_failMessage != ""){
-                formatMessage(_failMessage);
-                getchar();
-            }
-            return false;
+        if (_failMessage != ""){
+            formatMessage(_failMessage);
+            getchar();
         }
-    }   
+        return false;
+    }
 };

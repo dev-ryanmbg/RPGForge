@@ -3,9 +3,6 @@
 #include <cstdlib>
 #include <locale.h>
 #include "../system/ui/format.hpp"
-#include "../system/statblocks/AbilityScore.hpp"
-#include "../system/statblocks/Points.hpp"
-#include "../system/statblocks/Container.hpp"
 
 using namespace std;
 
@@ -39,9 +36,6 @@ int main (){
     setlocale(LC_ALL, ".UTF-8");
     // header("RPG Forge");
     DnDPlayerCharacter Ryan;
-    formatMessage("Hey {} {} {} {}");
-    cout << "oii";
-    int a;
-    cin >> a;
+    formatMessage("Você ganhou {AbilityScore} e +10 {Points}", &Ryan.Str, &Ryan.Hp);
     return 0;
 }
