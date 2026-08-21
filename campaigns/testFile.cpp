@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <locale.h>
-#include "../system/ui.hpp"
-#include "../system/statblock.hpp"
+#include "../system/ui/format.hpp"
+
 using namespace std;
 
 struct DnDPlayerCharacter {
@@ -34,8 +34,8 @@ struct DnDPlayerCharacter {
 
 int main (){
     setlocale(LC_ALL, ".UTF-8");
-    header("RPG Forge");
+    // header("RPG Forge");
     DnDPlayerCharacter Ryan;
-    formatMessage("Ryan Strenght Value: {AbilityScore}", &Ryan.Str);
+    formatMessage("Você ganhou {AbilityScore} e +10 {Points}", &Ryan.Str, &Ryan.Hp);
     return 0;
 }
